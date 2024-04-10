@@ -13,8 +13,13 @@ require_once ('vendor/autoload.php');
 $f3 = Base::instance();
 
 //Define a default route
+//https://kcheng.greenriverdev.com/328/hello-fat-free/
 $f3->route('GET /', function(){
-    echo '<h1>Hello Fat-Free!</h1>';
+//    echo '<h1>Hello Fat-Free!</h1>';
+
+    //Render a view page
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 //Run Fat-Free
